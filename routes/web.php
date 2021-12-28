@@ -17,9 +17,8 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/filmes', function () {
-    return view('movies.index');
-})->name('movies.index');
+Route::get('/filmes', \App\Actions\GetMoviesAction::class)->name('movies.index');
+Route::get('/filmes/{movie}', \App\Actions\GetMovieAction::class)->name('movies.show');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

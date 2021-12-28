@@ -14,7 +14,8 @@ class MovieFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->company(),
+            'image_path' => $this->faker->imageUrl()
         ];
     }
 }
