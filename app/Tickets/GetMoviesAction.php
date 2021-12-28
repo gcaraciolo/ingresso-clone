@@ -1,8 +1,7 @@
 <?php declare(strict_types=1);
 
-namespace App\Actions;
+namespace App\Tickets;
 
-use App\Models\Movie;
 use Illuminate\Http\Request;
 use Lorisleiva\Actions\Concerns\AsController;
 
