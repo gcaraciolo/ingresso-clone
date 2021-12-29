@@ -11,6 +11,7 @@ class GetMovieAction
 
     public function asController(Request $request, Movie $movie)
     {
-        return view('movies.show', compact('movie'));
+        $theaters = Theater::with('rooms.movieSessions')->showingMovie($movie)->cursorPaginate();
+        return view('movies.show', compact('movie', 'theaters'));
     }
 }

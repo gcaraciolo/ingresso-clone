@@ -1,5 +1,9 @@
 # Ingresso.com
 
+## Documentation
+
+Acesse a [documentação](./docs/README.md) para mais detalhes.
+
 ## Setup
 
 php

@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-public-layout>
     {{ __('Filmes - ') }} Recife
 
     <ul>
@@ -14,4 +14,4 @@
 
     {{ $movies->links() }}
 
-</x-guest-layout>
+</x-public-layout>

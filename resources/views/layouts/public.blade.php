@@ -24,16 +24,28 @@
     <x-jet-banner />
 
     <div class="min-h-screen bg-gray-100">
-        @livewire('navigation-menu')
+        @auth
+            @livewire('navigation-menu')
+        @else
+            @include('guest-navigation-menu')
+        @endauth
 
-        <!-- Page Heading -->
-        @if (isset($header))
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
+        <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+            <!-- Primary Navigation Menu -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="hidden sm:flex sm:items-center sm:ml-6">
+                        <ul>
+                            <li>
+                                <a href="{{ route('movies.index') }}"
+                                    class="text-sm text-gray-700 dark:text-gray-500 underline">{{ __('Filmes') }}</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </header>
-        @endif
+            </div>
+        </nav>
+
 
         @include('alert')
 

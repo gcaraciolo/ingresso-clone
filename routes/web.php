@@ -20,6 +20,7 @@ Route::get('/', function () {
 Route::get('/filmes', \App\Tickets\GetMoviesAction::class)->name('movies.index');
 Route::get('/filmes/{movie}', \App\Tickets\GetMovieAction::class)->name('movies.show');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum'])->group(function () {
+    Route::view('/dashboard', 'dashboard')->name('dashboard');
+    Route::post('/bookings/{movieSession}', \App\Tickets\BookingAction::class)->name('bookings.store');
+});

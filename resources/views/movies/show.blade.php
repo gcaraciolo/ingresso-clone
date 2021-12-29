@@ -1,3 +1,7 @@
-<x-guest-layout>
-    {{ $movie->name }}
-</x-guest-layout>
+<x-public-layout>
+    <div>
+        Filme: {{ $movie->name }}
+    </div>
+
+    @include('movies.on_theaters', $theaters)
+</x-public-layout>

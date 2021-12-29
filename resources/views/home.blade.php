@@ -1,3 +1,3 @@
-<x-guest-layout>
+<x-public-layout>
 
-</x-guest-layout>
+</x-public-layout>

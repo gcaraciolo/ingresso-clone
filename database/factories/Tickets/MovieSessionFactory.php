@@ -1,10 +1,10 @@
 <?php
 
-namespace Database\Factories;
+namespace Database\Factories\Tickets;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class MovieFactory extends Factory
+class MovieSessionFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,8 +14,7 @@ class MovieFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->company(),
-            'image_path' => $this->faker->imageUrl()
+            //
         ];
     }
 }

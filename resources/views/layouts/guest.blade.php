@@ -14,27 +14,14 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
-    @livewireStyles
-
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 
-<body class="font-sans antialiased">
-    <x-jet-banner />
-
-    <div class="min-h-screen bg-gray-100">
-        @include('guest-navigation-menu')
-
-        <!-- Page Content -->
-        <main>
-            {{ $slot }}
-        </main>
+<body>
+    <div class="font-sans text-gray-900 antialiased">
+        {{ $slot }}
     </div>
-
-    @stack('modals')
-
-    @livewireScripts
 </body>
 
 </html>
