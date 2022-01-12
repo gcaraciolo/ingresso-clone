@@ -76,6 +76,10 @@ Zend Engine v4.1.1, Copyright (c) Zend Technologies
     with Zend OPcache v8.1.1, Copyright (c), by Zend Technologies
 ```
 
+# Instalando pacotes adicionais
+
+```sudo apt-get install php8.1-curl php8.1-mbstring php8.1-pgsql php8.1-xml php8.1-zip php8.1-gd php8.1-common php8.1-mysql php8.1-xmlrpc php8.1-imagick php8.1-cli php8.1-dev php8.1-imap php8.1-opcache php8.1-soap php8.1-intl php8.1-sqlite3```
+
 # Instalando Composer
 Conteudo original: https://getcomposer.org/download/
 
@@ -92,4 +96,33 @@ Copiando composer.phar para o PATH para poder digitar no terminal "composer" em 
 
 ### Entrar na pasta do projeto e rodar
 
+```composer install```
+
+E depois
+
 ```php artisan serve```
+
+# Troubleshooting
+
+Quando rodar o projeto com o comando ```php artisan serve``` pode acontecer alguns erros como o exemplo abaixo:
+
+```
+our lock file does not contain a compatible set of packages. Please run composer update.
+
+  Problem 1
+    - laravel/framework is locked to version v8.77.1 and an update of this package was not requested.
+    - laravel/framework v8.77.1 requires ext-mbstring * -> it is missing from your system. Install or enable PHP's mbstring extension.
+```
+
+#### Resolução
+
+Verifique se instalou corretamente os pacotes adicionais
+
+```sudo apt-get install php8.1-curl php8.1-mbstring php8.1-pgsql php8.1-xml php8.1-zip php8.1-gd php8.1-common php8.1-mysql php8.1-xmlrpc php8.1-imagick php8.1-cli php8.1-dev php8.1-imap php8.1-opcache php8.1-soap php8.1-intl php8.1-sqlite3```
+
+Tente rodar os comandos:
+
+```
+composer clearcache 
+composer selfupdate
+```
