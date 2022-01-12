@@ -7,4 +7,4 @@ na tabela movie_sessions para simular o cenário de concorrência para reservar 
 
 ## Como rodar o projeto no Linux
 
-https://github.com/gcaraciolo/ingresso-clone/blob/main/docs/run-project-debian-bullseye.md
+[Documento - Linux](https://github.com/gcaraciolo/ingresso-clone/blob/main/docs/run-project-debian-bullseye.md)
