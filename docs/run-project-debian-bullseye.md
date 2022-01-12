@@ -75,3 +75,21 @@ Copyright (c) The PHP Group
 Zend Engine v4.1.1, Copyright (c) Zend Technologies
     with Zend OPcache v8.1.1, Copyright (c), by Zend Technologies
 ```
+
+# Instalando Composer
+Conteudo original: https://getcomposer.org/download/
+
+```
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa72f40b5f787e49f22d4c2f19492ac310e8cba5b96ac8b64115ac402c8cd292b8a03482574915d1a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+```
+
+Copiando composer.phar para o PATH para poder digitar no terminal "composer" em qualquer lugar
+
+```sudo mv composer.phar /usr/local/bin/composer```
+
+### Entrar na pasta do projeto e rodar
+
+```php artisan serve```
